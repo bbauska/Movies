@@ -9,6 +9,8 @@
     <li>typescript</li>
 </ul>
 
+<h2>nextj2.org - https://nextjs.org/docs</h2>
+
 <h3>tmdb = the movie database . org</h3>
 
 <h4>https://nextjs.org/docs</h4>
