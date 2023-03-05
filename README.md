@@ -23,6 +23,7 @@
 <ul>
     <li>Application based authentication</li>
     <li>User based authentication</li>
+</ul>
 
 <p>Application based authentication will only let you query public data. For example, things like public lists. User based authentication is user specific, think of this like logging into the TMDb website. You can not only query the same public data as application based authentication but also your own personal data. For example, maybe you have a private list. This makes it easier to control the authenticated request as there is now only a single token in use.</p>
 
