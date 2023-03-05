@@ -36,7 +36,7 @@ curl --request GET \
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
-Application calls like a plain GET request to retrieve a public list for example, can still use the api_key query parameter if you wish.
+<p>Application calls like a plain GET request to retrieve a public list for example, can still use the api_key query parameter if you wish.</p>
 
 ```
 curl --request GET \
@@ -54,4 +54,28 @@ curl --request GET \
     
 <p>Here's what a full image URL looks like if the poster_path of /kqjL17yufvn9OVLyXYpvtyrFfak.jpg was returned for a movie:</p>
 
-    <h4>https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg</h4>
+<h4>https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg</h4>
+    
+<h2>Languages</h2>
+
+<p>Language support on TMDb is based on the language query parameter you send along with your request. You can specify one or two values (separated by a dash) with this parameter. Here's a breakdown of how this works.</p>
+
+<p>The first is a bare code. A simple example to request the German information of a lists items looks like:</p>
+
+```
+curl --request GET \
+  --url 'https://api.themoviedb.org/4/list/1?language=de' \
+  --header 'Authorization: Bearer {access_token}' \
+  --header 'Content-Type: application/json;charset=utf-8'
+```
+
+<p>Taking this a step further, knowing that some languages like Portuguese are available in different regions around the world, and you were only interested in Brazil, you can specify an extra tag. A request for this more specific data looks like:</p>
+
+```
+curl --request GET \
+  --url 'https://api.themoviedb.org/4/list/1?language=pt-BR' \
+  --header 'Authorization: Bearer {access_token}' \
+  --header 'Content-Type: application/json;charset=utf-8'
+```
+
+<p>Only a limited set of combinations are supported as a translation source and we try to be smart about how this works. In my first example, calling only de is really the same as calling de-DE. By default, a bare ISO-639-1 language will default to its matching pair, ie. pt-PT. This is why in my second example above, I showed you how you can override that value with pt-BR. The last example to show you would be a request for pt-US. This is not a valid translation and will default to pt-PT.</p>
