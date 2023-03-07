@@ -32,17 +32,17 @@
 <p>Starting with version 4, we're now using a Bearer token for all user authentication. If you head into your account page, under the API section, you will see a new key listed called API Read Access Token. This key is expected to be sent along as a Authorization header. A simple cURL example looks like the following:</p>
 
 ```
-curl --request GET \
-  --url 'https://api.themoviedb.org/4/list/1' \
-  --header 'Authorization: Bearer <<access_token>>' \
+curl --request GET 
+  --url 'https://api.themoviedb.org/4/list/1' 
+  --header 'Authorization: Bearer <<access_token>>' 
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
 <p>Application calls like a plain GET request to retrieve a public list for example, can still use the api_key query parameter if you wish.</p>
 
 ```
-curl --request GET \
-  --url 'https://api.themoviedb.org/4/list/1?api_key=<<api_key>>' \
+curl --request GET 
+  --url 'https://api.themoviedb.org/4/list/1?api_key=<<api_key>>' 
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
@@ -65,18 +65,18 @@ curl --request GET \
 <p>The first is a bare code. A simple example to request the German information of a lists items looks like:</p>
 
 ```
-curl --request GET \
-  --url 'https://api.themoviedb.org/4/list/1?language=de' \
-  --header 'Authorization: Bearer {access_token}' \
+curl --request GET 
+  --url 'https://api.themoviedb.org/4/list/1?language=de' 
+  --header 'Authorization: Bearer {access_token}' 
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
 <p>Taking this a step further, knowing that some languages like Portuguese are available in different regions around the world, and you were only interested in Brazil, you can specify an extra tag. A request for this more specific data looks like:</p>
 
 ```
-curl --request GET \
-  --url 'https://api.themoviedb.org/4/list/1?language=pt-BR' \
-  --header 'Authorization: Bearer {access_token}' \
+curl --request GET 
+  --url 'https://api.themoviedb.org/4/list/1?language=pt-BR' 
+  --header 'Authorization: Bearer {access_token}' 
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
