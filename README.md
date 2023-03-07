@@ -80,6 +80,15 @@ curl --request GET
   --header 'Content-Type: application/json;charset=utf-8'
 ```
 
+
+<h3>Hands-on Lab: Hello World (External resource)</h3>
+
+<p>Clicking on the Start Lab button below will launch the cloud-based SN labs virtual labs environment with instructions to complete this lab. Your username and email will be shared with SN Labs to authenticate and provision your lab environment.</p>
+
+<a href=” https://labs.cognitiveclass.ai/v2/tools/cloud-ide-kubernetes?ulid=ulid-5054905bf21941e3fe81fa528c492480bba725b0”>Start Lab</a>
+ [Start Lab]( https://labs.cognitiveclass.ai/v2/tools/cloud-ide-kubernetes?ulid=ulid-5054905bf21941e3fe81fa528c492480bba725b0)
+
+
 <p>Only a limited set of combinations are supported as a translation source and we try to be smart about how this works. In my first example, calling only de is really the same as calling de-DE. By default, a bare ISO-639-1 language will default to its matching pair, ie. pt-PT. This is why in my second example above, I showed you how you can override that value with pt-BR. The last example to show you would be a request for pt-US. This is not a valid translation and will default to pt-PT.</p>
 
 
