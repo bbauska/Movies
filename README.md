@@ -81,3 +81,31 @@ curl --request GET
 ```
 
 <p>Only a limited set of combinations are supported as a translation source and we try to be smart about how this works. In my first example, calling only de is really the same as calling de-DE. By default, a bare ISO-639-1 language will default to its matching pair, ie. pt-PT. This is why in my second example above, I showed you how you can override that value with pt-BR. The last example to show you would be a request for pt-US. This is not a valid translation and will default to pt-PT.</p>
+
+
+<h1>TypeScript</h1>
+
+<p>Next.js provides an integrated TypeScript experience, including zero-configuration set up and built-in types for Pages, APIs, and more.</p>
+<ul>
+  <li>Clone and deploy the TypeScript starter</li>
+  <li>View an example application</li>
+</ul>
+
+```
+create-next-app support
+```
+
+<p>You can create a TypeScript project with create-next-app using the --ts, --typescript flag like so:</p>
+
+```
+npx create-next-app@latest --ts
+# or
+yarn create next-app --typescript
+# or
+pnpm create next-app --ts
+```
+
+<p>Existing projects</p>
+
+
+
